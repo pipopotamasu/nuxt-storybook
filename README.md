@@ -2,10 +2,12 @@
 
 > Nuxt.js project
 
-## Build Setup
+## セットアップ方法
 
-``` bash
-# install dependencies
+事前に git clone してください。
+
+```bash
+# npmパッケージのインストール
 $ yarn install
 
 # serve with hot reload at localhost:3000
