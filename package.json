@@ -14,7 +14,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.0.0",
+    "vue-flatpickr-component": "^7.0.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",
