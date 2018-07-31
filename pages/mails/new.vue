@@ -1,9 +1,9 @@
 <template>
-  <create-mails></create-mails>
+  <create-mails/>
 </template>
 
 <script>
-import CreateMails from '~/components/organisms/CreateMails.vue'
+import CreateMails from "~/components/organisms/CreateMails.vue"
 
 export default {
   components: {

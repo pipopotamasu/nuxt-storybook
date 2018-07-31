@@ -18,46 +18,49 @@ export const state = () => ({
     { id: 3, content: "私をどのくらい尊敬できますか？", active: false }
   ],
   replyDeadlineDate: ""
-});
+})
 
 export const actions = {
   setTargetUser({ commit }, user) {
-    commit("setTargetUser", user);
+    commit("setTargetUser", user)
   },
   setReplyDeadlineDate({ commit }, date) {
-    commit("setReplyDeadlineDate", date);
+    commit("setReplyDeadlineDate", date)
   },
   toggleActivation({ commit }, toggleIndex) {
-    commit("toggleActivation", toggleIndex);
+    commit("toggleActivation", toggleIndex)
   },
   deleteFromUser({ commit }, index) {
-    commit("deleteFromUser", index);
+    commit("deleteFromUser", index)
   },
   setFromUser({ commit }, user) {
-    commit("setFromUser", user);
+    commit("setFromUser", user)
+  },
+  createMail() {
+    console.log("匿メール作成!")
   }
-};
+}
 
 export const getters = {
   fromUserIds(state) {
-    return state.fromUsers.map(user => user.id);
+    return state.fromUsers.map(user => user.id)
   }
-};
+}
 
 export const mutations = {
   setTargetUser(state, user) {
-    state.targetUser = user;
+    state.targetUser = user
   },
   setReplyDeadlineDate(state, date) {
-    state.replyDeadlineDate = date;
+    state.replyDeadlineDate = date
   },
   toggleActivation(state, toggleIndex) {
-    state.topics[toggleIndex].active = !state.topics[toggleIndex].active;
+    state.topics[toggleIndex].active = !state.topics[toggleIndex].active
   },
   deleteFromUser(state, index) {
-    state.fromUsers.splice(index, 1);
+    state.fromUsers.splice(index, 1)
   },
   setFromUser(state, user) {
-    state.fromUsers.push(user);
+    state.fromUsers.push(user)
   }
-};
+}
