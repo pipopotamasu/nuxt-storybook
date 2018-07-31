@@ -16,7 +16,9 @@
       :from-users="fromUsers"
       :delete-from-user="user => $store.dispatch('mail/deleteFromUser', user)"
     />
-    <mail-button/>
+    <div class="button-area">
+      <submit-button :on-click="() => $store.dispatch('mail/createMail')">送信</submit-button>
+    </div>
   </article>
 </template>
 
@@ -25,7 +27,7 @@ import TargetUser from "~/components/molecules/TargetUser.vue"
 import MailTopics from "~/components/molecules/MailTopics.vue"
 import ReplyDeadline from "~/components/molecules/ReplyDeadline.vue"
 import FromUsers from "~/components/molecules/FromUsers.vue"
-import MailButton from "~/components/mails/MailButton.vue"
+import SubmitButton from "~/components/atoms/buttons/SubmitButton.vue"
 
 export default {
   components: {
@@ -33,7 +35,7 @@ export default {
     MailTopics,
     ReplyDeadline,
     FromUsers,
-    MailButton
+    SubmitButton
   },
   computed: {
     targetUser() {
@@ -65,12 +67,18 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
+
+  .button-area {
+    background-color: blueviolet;
+    width: 100%;
+    padding: 0.5em 1em;
+  }
 }
 </style>

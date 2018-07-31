@@ -35,6 +35,9 @@ export const actions = {
   },
   setFromUser({ commit }, user) {
     commit("setFromUser", user)
+  },
+  createMail() {
+    console.log("匿メール作成!")
   }
 }
 
