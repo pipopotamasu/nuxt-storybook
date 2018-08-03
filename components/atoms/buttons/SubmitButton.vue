@@ -1,14 +1,9 @@
 <template>
-  <button @click="onClick"><slot /></button>
+  <button class="submit"><slot /></button>
 </template>
 
-<script>
-export default {
-  props: {
-    onClick: {
-      type: Function,
-      required: true
-    }
-  }
+<style lang="scss" scoped>
+.submit {
+  cursor: pointer;
 }
-</script>
+</style>

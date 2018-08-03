@@ -2,7 +2,12 @@
   <div class="from-users">
     <div class="header">
       <user-counter :numerator="fromUsersCount" :denominator="roomUsersCount"/>
-      <add-button><nuxt-link to="/mails/select_from_users"><label>メンバー追加</label></nuxt-link></add-button>
+      <div class="add">
+        <nuxt-link to="/mails/select_from_users">
+          <add-button />
+          <label>メンバー追加</label>
+        </nuxt-link>
+      </div>
     </div>
     <div class="users">
       <div class="user current-user">
@@ -70,6 +75,11 @@ export default {
   text-align: left;
   padding: 0.5em 1em;
   background-color: rgb(208, 255, 0);
+
+  .add {
+    float: right;
+    cursor: pointer;
+  }
 
   .users {
     clear: left;

@@ -1,13 +1,9 @@
 <template>
-  <div class="add">
-    <span class="add-icon">+</span>
-    <slot/>
-  </div>
+  <span class="add-icon">+</span>
 </template>
 
 <style lang="scss" scoped>
-.add {
-  float: right;
+.add-icon {
   cursor: pointer;
 }
 </style>

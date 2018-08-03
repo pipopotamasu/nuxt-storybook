@@ -17,7 +17,7 @@
       :delete-from-user="user => $store.dispatch('mail/deleteFromUser', user)"
     />
     <div class="button-area">
-      <submit-button :on-click="() => $store.dispatch('mail/createMail')">送信</submit-button>
+      <submit-button @click.native="$store.dispatch('mail/createMail')">送信</submit-button>
     </div>
   </article>
 </template>
