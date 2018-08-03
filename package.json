@@ -18,6 +18,11 @@
     "vue-flatpickr-component": "^7.0.4"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-centered": "^3.4.10",
+    "@storybook/addon-knobs": "^3.4.10",
+    "@storybook/addon-links": "^3.4.10",
+    "@storybook/vue": "^3.4.10",
     "babel-eslint": "^8.2.5",
     "eslint": "^5.0.1",
     "eslint-config-prettier": "^2.9.0",
