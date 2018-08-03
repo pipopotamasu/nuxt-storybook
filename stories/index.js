@@ -9,6 +9,7 @@ import SubmitButton from "../components/atoms/buttons/SubmitButton.vue"
 import DatePicker from "../components/atoms/date/DatePicker.vue"
 import CheckBox from "../components/atoms/form/CheckBox.vue"
 import TextInput from "../components/atoms/form/TextInput.vue"
+import SearchIcon from "../components/atoms/search/SearchIcon.vue"
 
 storiesOf("atoms/Button", module)
   .addDecorator(Centered)
@@ -46,4 +47,11 @@ storiesOf("atoms/Form", module)
     components: { TextInput },
     template: `<text-input @keyup.native="action" :placeholder="'入力してください'"></text-input>`,
     methods: { action: action("inputed!") }
+  }))
+
+storiesOf("atoms/Search", module)
+  .addDecorator(Centered)
+  .add("SearchIcon", () => ({
+    components: { SearchIcon },
+    template: `<search-icon></search-icon>`
   }))
