@@ -1,10 +1,8 @@
 <template>
   <input
     :placeholder="placeholder"
-    v-model="input"
     class="text-input"
-    type="text"
-    @keyup="onKeyup(input)">
+    type="text">
 </template>
 
 <script>
@@ -14,16 +12,6 @@ export default {
       type: String,
       required: false,
       default: ""
-    },
-    onKeyup: {
-      type: Function,
-      required: false,
-      default: () => {}
-    }
-  },
-  data() {
-    return {
-      input: ""
     }
   }
 }

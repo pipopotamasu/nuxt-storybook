@@ -8,6 +8,7 @@ import DeleteButton from "../components/atoms/buttons/AddButton.vue"
 import SubmitButton from "../components/atoms/buttons/SubmitButton.vue"
 import DatePicker from "../components/atoms/date/DatePicker.vue"
 import CheckBox from "../components/atoms/form/CheckBox.vue"
+import TextInput from "../components/atoms/form/TextInput.vue"
 
 storiesOf("atoms/Button", module)
   .addDecorator(Centered)
@@ -40,4 +41,9 @@ storiesOf("atoms/Form", module)
     components: { CheckBox },
     template: `<check-box @change.native="action" :checked="false"></check-box>`,
     methods: { action: action("checked!") }
+  }))
+  .add("TextInput", () => ({
+    components: { TextInput },
+    template: `<text-input @keyup.native="action" :placeholder="'入力してください'"></text-input>`,
+    methods: { action: action("inputed!") }
   }))
