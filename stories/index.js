@@ -6,8 +6,9 @@ import { action } from "@storybook/addon-actions"
 import AddButton from "../components/atoms/buttons/AddButton.vue"
 import DeleteButton from "../components/atoms/buttons/AddButton.vue"
 import SubmitButton from "../components/atoms/buttons/SubmitButton.vue"
+import DatePicker from "../components/atoms/date/DatePicker.vue"
 
-storiesOf("atoms", module)
+storiesOf("atoms/Button", module)
   .addDecorator(Centered)
   .add("AddButton", () => ({
     components: { AddButton },
@@ -22,4 +23,12 @@ storiesOf("atoms", module)
     components: { SubmitButton },
     template: `<submit-button @click.native="action">送信</submit-button>`,
     methods: { action: action("送信!") }
+  }))
+
+storiesOf("atoms/Date", module)
+  .addDecorator(Centered)
+  .add("DatePicker", () => ({
+    components: { DatePicker },
+    template: `<date-picker :setDate="action"></date-picker>`,
+    methods: { action: action("picked!") }
   }))
