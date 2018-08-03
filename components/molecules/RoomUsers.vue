@@ -1,7 +1,7 @@
 <template>
   <div class="users">
     <div v-for="(user, i) in roomUsers" :key="user.id" class="user">
-      <check-box :on-change="onChange(user, i)" :checked="fromUserIds.includes(user.id)" class="checkbox"/>
+      <check-box @change.native="e => onChange(e, user, i)" :checked="fromUserIds.includes(user.id)" class="checkbox"/>
       <user-icon :icon_path="user.icon_path" class="user-element"/>
       <user-name :last_name="user.last_name" :first_name="user.first_name" class="user-element"/>
     </div>
@@ -38,13 +38,11 @@ export default {
     }
   },
   methods: {
-    onChange(user, index) {
-      return e => {
-        if (e.currentTarget.checked) {
-          this.setFromUsers(user)
-        } else {
-          this.deleteFromUsers(index)
-        }
+    onChange(e, user, index) {
+      if (e.currentTarget.checked) {
+        this.setFromUsers(user)
+      } else {
+        this.deleteFromUsers(index)
       }
     }
   }

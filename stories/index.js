@@ -7,6 +7,7 @@ import AddButton from "../components/atoms/buttons/AddButton.vue"
 import DeleteButton from "../components/atoms/buttons/AddButton.vue"
 import SubmitButton from "../components/atoms/buttons/SubmitButton.vue"
 import DatePicker from "../components/atoms/date/DatePicker.vue"
+import CheckBox from "../components/atoms/form/CheckBox.vue"
 
 storiesOf("atoms/Button", module)
   .addDecorator(Centered)
@@ -31,4 +32,12 @@ storiesOf("atoms/Date", module)
     components: { DatePicker },
     template: `<date-picker :setDate="action"></date-picker>`,
     methods: { action: action("picked!") }
+  }))
+
+storiesOf("atoms/Form", module)
+  .addDecorator(Centered)
+  .add("CheckBox", () => ({
+    components: { CheckBox },
+    template: `<check-box @change.native="action" :checked="false"></check-box>`,
+    methods: { action: action("checked!") }
   }))

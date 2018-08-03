@@ -1,15 +1,10 @@
 <template>
-  <input :checked="checked" class="text-input" type="checkbox" @change="onChange">
+  <input :checked="checked" class="text-input" type="checkbox">
 </template>
 
 <script>
 export default {
   props: {
-    onChange: {
-      type: Function,
-      required: false,
-      default: () => {}
-    },
     checked: {
       type: Boolean,
       required: false,
