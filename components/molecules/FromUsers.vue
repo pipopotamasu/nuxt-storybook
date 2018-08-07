@@ -17,7 +17,7 @@
       <div v-for="user in fromUsers" :key="user.id" class="user">
         <user-icon :icon_path="user.icon_path" class="user-element"/>
         <user-name :last_name="user.last_name" :first_name="user.first_name" class="user-element"/>
-        <delete-button :on-delete="onDelete(user)" class="user-delete"/>
+        <delete-button @click.native="deleteFromUser(user)" class="user-delete"/>
       </div>
     </div>
   </div>
