@@ -21,7 +21,8 @@ storiesOf("atoms/Button", module)
   .addDecorator(Centered)
   .add("AddButton", () => ({
     components: { AddButton },
-    template: `<add-button>label</add-button>`
+    template: `<add-button @click.native="action">label</add-button>`,
+    methods: { action: action("added!") }
   }))
   .add("DeleteButton", () => ({
     components: { DeleteButton },
