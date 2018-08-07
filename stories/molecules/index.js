@@ -3,7 +3,7 @@ import Centered from "@storybook/addon-centered"
 import { withKnobs, number, boolean, text } from "@storybook/addon-knobs"
 import { action } from "@storybook/addon-actions"
 
-import FromUsers from "../../components/molecules/FromUsers.vue"
+import FromUsers from "~/components/molecules/FromUsers.vue"
 
 storiesOf("molecules", module)
   .addDecorator(Centered)
