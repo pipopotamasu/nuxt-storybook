@@ -3,6 +3,8 @@ import Centered from "@storybook/addon-centered"
 import { withKnobs, number, boolean, text } from "@storybook/addon-knobs"
 import { action } from "@storybook/addon-actions"
 
+import iconPath from "../../static/icons/wakabayashi.jpg"
+
 import AddButton from "../../components/atoms/buttons/AddButton.vue"
 import DeleteButton from "../../components/atoms/buttons/AddButton.vue"
 import SubmitButton from "../../components/atoms/buttons/SubmitButton.vue"
@@ -82,7 +84,7 @@ storiesOf("atoms/Users", module)
     components: { UserIcon },
     template: `<user-icon :icon_path="'${text(
       "Image Path",
-      "path_to_icon"
+      iconPath
     )}'"></user-icon>`
   }))
   .add("UserName", () => ({
