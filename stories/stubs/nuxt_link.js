@@ -1,4 +1,5 @@
 import Vue from "vue"
+import { action } from "@storybook/addon-actions"
 
 // nuxt-linkのwrap
 Vue.component("NuxtLink", {
