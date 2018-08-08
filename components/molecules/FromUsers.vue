@@ -60,11 +60,6 @@ export default {
     fromUsersCount() {
       return this.fromUsers.length + 1
     }
-  },
-  methods: {
-    onDelete(user) {
-      return () => this.deleteFromUser(user)
-    }
   }
 }
 </script>
