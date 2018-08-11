@@ -2,7 +2,7 @@
   <div class="search-box">
     <search-icon/>
     <text-input
-      v-model="input"
+      @keyup.native="e => search(e.target.value)"
       :placeholder="'名前で検索'"
       :on-keyup="search"/>
   </div>
@@ -21,11 +21,6 @@ export default {
     search: {
       type: Function,
       required: true
-    }
-  },
-  data() {
-    return {
-      input: ""
     }
   }
 }

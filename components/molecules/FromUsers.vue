@@ -2,7 +2,12 @@
   <div class="from-users">
     <div class="header">
       <user-counter :numerator="fromUsersCount" :denominator="roomUsersCount"/>
-      <add-button><nuxt-link to="/mails/select_from_users"><label>メンバー追加</label></nuxt-link></add-button>
+      <div class="add">
+        <nuxt-link to="/mails/select_from_users">
+          <add-button />
+          <label>メンバー追加</label>
+        </nuxt-link>
+      </div>
     </div>
     <div class="users">
       <div class="user current-user">
@@ -12,7 +17,7 @@
       <div v-for="user in fromUsers" :key="user.id" class="user">
         <user-icon :icon_path="user.icon_path" class="user-element"/>
         <user-name :last_name="user.last_name" :first_name="user.first_name" class="user-element"/>
-        <delete-button :on-delete="onDelete(user)" class="user-delete"/>
+        <delete-button @click.native="deleteFromUser(user)" class="user-delete"/>
       </div>
     </div>
   </div>
@@ -55,11 +60,6 @@ export default {
     fromUsersCount() {
       return this.fromUsers.length + 1
     }
-  },
-  methods: {
-    onDelete(user) {
-      return () => this.deleteFromUser(user)
-    }
   }
 }
 </script>
@@ -70,6 +70,11 @@ export default {
   text-align: left;
   padding: 0.5em 1em;
   background-color: rgb(208, 255, 0);
+
+  .add {
+    float: right;
+    cursor: pointer;
+  }
 
   .users {
     clear: left;
