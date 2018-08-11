@@ -12,6 +12,7 @@ import { action } from "@storybook/addon-actions"
 import iconPath from "~/static/icons/wakabayashi.jpg"
 import FromUsers from "~/components/molecules/FromUsers.vue"
 import MailTopics from "~/components/molecules/MailTopics.vue"
+import ReplyDeadline from "~/components/molecules/ReplyDeadline.vue"
 import "~/stories/stubs/nuxt_link"
 
 storiesOf("molecules", module)
@@ -43,4 +44,11 @@ storiesOf("molecules", module)
                 :toggle="action"
                ></mail-topics>`,
     methods: { action: action("toggled!") }
+  }))
+  .add("ReplyDeadline", () => ({
+    components: { ReplyDeadline },
+    template: `<reply-deadline
+                :setDate="action"
+               ></reply-deadline>`,
+    methods: { action: action("date setted!") }
   }))
