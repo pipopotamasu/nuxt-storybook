@@ -15,6 +15,7 @@ import MailTopics from "~/components/molecules/MailTopics.vue"
 import ReplyDeadline from "~/components/molecules/ReplyDeadline.vue"
 import RoomUsers from "~/components/molecules/RoomUsers.vue"
 import SearchBox from "~/components/molecules/SearchBox.vue"
+import TargetUser from "~/components/molecules/TargetUser.vue"
 import "~/stories/stubs/nuxt_link"
 
 storiesOf("molecules", module)
@@ -73,4 +74,10 @@ storiesOf("molecules", module)
                 :search="action"
                ></search-box>`,
     methods: { action: action("searched!") }
+  }))
+  .add("TargetUser", () => ({
+    components: { TargetUser },
+    template: `<target-user
+                :user="{ id: 1, icon_path: '${iconPath}', first_name: '智', last_name: '里中', sex: 1 }"
+               ></target-user>`
   }))
