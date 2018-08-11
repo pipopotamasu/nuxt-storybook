@@ -13,6 +13,7 @@ import iconPath from "~/static/icons/wakabayashi.jpg"
 import FromUsers from "~/components/molecules/FromUsers.vue"
 import MailTopics from "~/components/molecules/MailTopics.vue"
 import ReplyDeadline from "~/components/molecules/ReplyDeadline.vue"
+import RoomUsers from "~/components/molecules/RoomUsers.vue"
 import "~/stories/stubs/nuxt_link"
 
 storiesOf("molecules", module)
@@ -51,4 +52,17 @@ storiesOf("molecules", module)
                 :setDate="action"
                ></reply-deadline>`,
     methods: { action: action("date setted!") }
+  }))
+  .add("RoomUsers", () => ({
+    components: { RoomUsers },
+    template: `<room-users
+                :roomUsers="[
+                  { id: 1, icon_path: '${iconPath}', first_name: '智', last_name: '里中' },
+                  { id: 3, icon_path: '${iconPath}', first_name: '太郎', last_name: '山田' }
+                ]"
+                :fromUserIds="[1,2]"
+                :setFromUsers="set"
+                :deleteFromUsers="deleteUser"
+               ></room-users>`,
+    methods: { set: action("setted!"), deleteUser: action("deleted!") }
   }))
