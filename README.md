@@ -19,6 +19,9 @@ $ yarn start
 
 # generate static project
 $ yarn run generate
+
+# storybook
+$ yarn run storybook
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
