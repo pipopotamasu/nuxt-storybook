@@ -4,7 +4,8 @@ const path = require("path")
 module.exports = (baseConfig, env, defaultConfig) => {
   // nuxtのパス解決をstorybookでも使用できるようにする
   Object.assign(defaultConfig.resolve.alias, {
-    "~": path.resolve(__dirname, "../")
+    "~": path.resolve(__dirname, "../"),
+    "@": path.resolve(__dirname, "../")
   })
   return defaultConfig
 }
