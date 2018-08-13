@@ -6,7 +6,7 @@ import { action } from "@storybook/addon-actions"
 import iconPath from "~/static/icons/wakabayashi.jpg"
 
 import AddButton from "~/components/atoms/buttons/AddButton.vue"
-import DeleteButton from "~/components/atoms/buttons/AddButton.vue"
+import DeleteButton from "~/components/atoms/buttons/DeleteButton.vue"
 import SubmitButton from "~/components/atoms/buttons/SubmitButton.vue"
 import DatePicker from "~/components/atoms/date/DatePicker.vue"
 import CheckBox from "~/components/atoms/form/CheckBox.vue"
